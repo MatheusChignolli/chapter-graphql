@@ -1,0 +1,125 @@
+.tags {
+  background-color: #161e26;
+  color: #fff;
+  width: 25%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tags h2 {
+  padding-bottom: 24px;
+}
+
+.tags ul {
+  list-style: none;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 900px;
+  scrollbar-width: none;
+}
+
+.tags ul li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.tags ul li .tag-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+.tags ul li .delete {
+  margin-left: auto;
+  padding: 12px;
+  background-color: #e535ab;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.tags ul li .delete:hover {
+  opacity: 0.75;
+}
+
+.tags ul li .delete::before,
+.tags ul li .delete::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #fff;
+  height: 16px;
+  top: 4px;
+  left: 10px;
+}
+
+.tags ul li .delete::before {
+  transform: rotate(45deg)
+}
+
+.tags ul li .delete::after {
+  transform: rotate(-45deg)
+}
+
+.tags ul li + li {
+  margin-top: 12px;
+}
+
+.tags form {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.tags form.update-tag input {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px;
+  margin: 0 12px 0 4px;
+  border: none;
+  border-bottom: 1px solid transparent;
+  transition: 300ms;
+  max-width: 180px;
+}
+
+.tags form.update-tag input:focus-visible {
+  border-bottom: 1px solid #e5e5f5;
+}
+
+.tags form.create-tag {
+  width: 100%;
+}
+
+.tags form.create-tag label {
+  color: #e535ab;
+  margin-bottom: 4px;
+}
+
+.tags form.create-tag input {
+  background-color: #e535ab;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 2px 2px 0 rgba(1, 1, 1, 0.3);
+  border: none;
+  margin-bottom: 4px;
+}
+
+.tags button {
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #e535ab;
+  color: #e535ab;
+  font-size: 1rem;
+  cursor: pointer;
+}

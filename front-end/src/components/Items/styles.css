@@ -1,0 +1,128 @@
+.items {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items .list {
+  background-color: #fafafb;
+  border-radius: 4px;
+  padding: 16px;
+  min-width: 300px;
+}
+
+.items h1 {
+  padding-bottom: 24px;
+}
+
+.items .item-tag-color {
+  padding: 2px 12px;
+  border-radius: 50px;
+  width: fit-content;
+  border-width: 2px;
+  font-size: 0.75rem;
+  border-style: solid;
+  margin: 4px 0;
+}
+
+.items ul li .delete {
+  margin-left: auto;
+  background-color: #161e26;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: 300ms;
+  width: 24px;
+  height: 24px;
+}
+
+.items ul li .delete:hover {
+  opacity: 0.75;
+}
+
+.items ul li .delete::before,
+.items ul li .delete::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #fff;
+  height: 12px;
+  top: 5px;
+  left: 10px;
+}
+
+.items ul li .delete::before {
+  transform: rotate(45deg)
+}
+
+.items ul li .delete::after {
+  transform: rotate(-45deg)
+}
+
+.items .list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.items .list li + li {
+  margin-top: 8px;
+}
+
+.items .create-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.items .update-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items .update-item input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #161e26;
+  color: #161e26;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.items .create-item input {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #e535ab;
+  color: #e535ab;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+.items .create-item button {
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #e535ab;
+  color: #e535ab;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.items .create-item select {
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 4px;
+  border: 1px solid #e535ab;
+  color: #e535ab;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.items .create-item label {
+  color: #e535ab;
+  font-size: 0.875rem;
+  margin: 4px 0;
+}
